@@ -1,0 +1,21 @@
+package com.intesasanpaolo.fenice.ispfenice.general.service.api.soap;
+
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebResult;
+import javax.jws.WebService;
+
+import com.intesasanpaolo.fenice.ispfenice.general.logic.api.to.IntervistaEto;
+
+/**
+ * @author riraman
+ *
+ */
+@WebService
+public interface GeneralSoapService {
+
+  @WebMethod
+  @WebResult(name = "message")
+  public IntervistaEto getIntervista(@WebParam(name = "id") long id);
+
+}
